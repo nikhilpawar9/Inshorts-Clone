@@ -13,18 +13,21 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import categories from '../data/categories';
 
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 200,
+    paddingLeft:10,
+    paddingRight:5
   },
   fullList: {
     width: 'auto',
   },
 });
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer({setCategory}) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -63,18 +66,16 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem>
+            Categories
           </ListItem>
-        ))}
+        
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+        {categories.map((text, index) => (
+          <ListItem style={{height:40, borderRadius:3}} button key={text} onClick={()=>setCategory(text)}>
+            
             <ListItemText primary={text} />
           </ListItem>
         ))}

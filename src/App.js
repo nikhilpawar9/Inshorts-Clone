@@ -2,9 +2,11 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
+import Footer from './components/Footer/Footer';
 import NavInshorts from "./components/NavInshorts"
 import NewsContent from './components/NewsContent/NewsContent';
 import apikey from './data/config';
+
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
     <div className="App">
       <NavInshorts setCategory={setCategory}/>
       <NewsContent/>
+      <Footer/>
     </div>
   );
 }

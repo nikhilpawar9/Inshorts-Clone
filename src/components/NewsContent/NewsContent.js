@@ -4,11 +4,11 @@ import NewsCard from "../NewsCard/NewsCard";
 import "./NewsContent.css"
 const NewsContent = ({newsArray, newsResults}) => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth='md'>
       <div className="content">
         <div className="downloadMessage">
           <span className="downloadText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus!
+          For the best experience use inshorts app on your smartphone
           </span>
           <img
             src="https://assets.inshorts.com/website_assets/images/appstore.png"
@@ -22,11 +22,14 @@ const NewsContent = ({newsArray, newsResults}) => {
           />
         </div>
 
+    <Container maxWidth='md'>
+        
         {
           newsArray.map((newsItem)=>(
             <NewsCard newsItem={newsItem} key={newsItem.title} />
           ))
         }
+    </Container>
 
 
       </div>

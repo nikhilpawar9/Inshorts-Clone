@@ -1,4 +1,6 @@
 import React from "react";
+import "./Newscard.css"
+
 
 const NewsCard = ({ newsItem }) => {
   console.log(newsItem);
@@ -16,26 +18,25 @@ const NewsCard = ({ newsItem }) => {
 
       <div className="newsText">
         <div>
+          
           {<span className="title">{newsItem.title}</span>}
+          
           <br />
+
           <span className="author">
-            <a href="{newsItem.url}" target="_blank">
-              <b>{newsItem.source.name}</b>
-            </a>
+            <a href={newsItem.url} target="__blank">
+              <b >short </b>
+            </a>{" "}
             <span className="muted">
               {" "}
-              by {newsItem.author ? newsItem.author : "unknown"}
+              by {newsItem.author ? newsItem.author : "unknown"} /{" "}
+              
             </span>
           </span>
-
           <div className="lowernewsText">
             <div className="description">{newsItem.description}</div>
-            <span className="readmore">
-
-            </span>
+            <span className="readmore"></span>
           </div>
-
-
         </div>
       </div>
     </div>

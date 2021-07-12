@@ -1,11 +1,11 @@
 const categories = [
-    "business",
-    "entertainment",
-    "genaral",
-    "health",
-    "science",
-    "sports",
-    "technology",
+    "Business",
+    "Entertainment",
+    "General",
+    "Health",
+    "Science",
+    "Sports",
+    "Technology",
 ];
 
 export default categories;

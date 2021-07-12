@@ -6,7 +6,8 @@
 
 News Web App 📰 built using React ⚛️ and NewsAPI 🚀 Fetches latest news. 😍 
 
-Checkout the live Website [here](https://newswebapp.herokuapp.com/)!
+Checkout the live Website [here](https://inshorts-webapp.netlify.app/)!
+News content will only be loaded in Mozilla Firefox browser due to NewsAPI policy
 
 ### Demo 🎥
 

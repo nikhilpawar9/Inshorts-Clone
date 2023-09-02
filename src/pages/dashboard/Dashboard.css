@@ -1,0 +1,31 @@
+/* Dashboard.css */
+.header {
+  display: flex;
+  align-items: center;
+}
+.demo-logo {
+  color: aliceblue;
+}
+
+.sider {
+  background: "#0000";
+  width: 200px;
+}
+
+.menu {
+  height: 100%;
+  border-right: 0;
+  font-size: medium;
+  padding: 10px;
+}
+
+.layout {
+  padding: 0 24px 24px;
+}
+
+.content {
+  padding: 24px;
+  min-height: 380px;
+  background: white;
+  border-radius: 1rem;
+}
